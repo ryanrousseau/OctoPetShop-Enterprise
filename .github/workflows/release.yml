@@ -22,6 +22,6 @@ jobs:
         id: "create-release"
         with:
           project: "OctoPetShop - Gitflow 1"
-          channel: "Release"
+          channel: "2 - Release"
       outputs: 
        release_number: ${{ steps.create-release.outputs.release_number }}
