@@ -123,6 +123,6 @@ jobs:
       - uses: OctopusDeploy/create-release-action@v3
         id: "create-release"
         with:
-          project: "OctoPetShop - IIS"
+          project: "OctoPetShop - Gitflow 1"
       outputs: 
        release_number: ${{ steps.create-release.outputs.release_number }}
