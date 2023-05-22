@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-
   build:
-
     name: Build and push packages ⚙️
     runs-on: ubuntu-latest
     
@@ -130,7 +128,7 @@ jobs:
         run: echo "Executing SAST ✅"
 
   push-build-information:
-      name: Push Build Information to Octopus 🐙
+      name: Push Build Information 🐙
       needs: build 
       runs-on: ubuntu-latest
       
