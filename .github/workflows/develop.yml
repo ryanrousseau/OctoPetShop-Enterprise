@@ -141,7 +141,7 @@ jobs:
       - uses: OctopusDeploy/push-build-information-action@v3
         name: Push Build Information
         with:
-          version: ${{ needs.build.outputs.version }}
+          version: ${{ needs.build.outputs.version }}-gitflow
           packages: |
             OctoPetShop.Database
             OctoPetShop.Web
