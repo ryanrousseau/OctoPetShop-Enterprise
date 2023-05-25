@@ -188,3 +188,18 @@ jobs:
     steps:
       - name: Gather approval
         run: echo "Approval gathered ✅"
+
+  create-pull-request:
+    name: Create pull request to release branch 🔼
+    needs: [approval]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run the Action
+        uses: devops-infra/action-pull-request@v0.5.5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          allow_no_diff: true
+          source_branch: develop
+          target_branch: release
+          title: Merge latest changes from develop to release
