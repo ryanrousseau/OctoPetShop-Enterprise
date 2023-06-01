@@ -38,7 +38,7 @@ jobs:
     needs: change-validation
             
     env:
-      OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
+      OCTOPUS_URL: ${{ vars.OCTOPUS_SERVER_URL }}
       OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY }}
       OCTOPUS_SPACE: ${{ vars.OCTOPUS_SPACE_NAME }}
       

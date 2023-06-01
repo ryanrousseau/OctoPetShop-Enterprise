@@ -103,7 +103,7 @@ jobs:
       uses: OctopusDeploy/push-package-action@v1.1.1
       with:
         api_key: ${{ secrets.OCTOPUS_API_KEY }}
-        server: ${{ secrets.OCTOPUS_SERVER_URL }}
+        server: ${{ vars.OCTOPUS_SERVER_URL }}
         space: ${{ vars.OCTOPUS_SPACE_NAME }}
         packages: |
           artifacts/OctoPetShop.Database.${{ steps.version-generator.outputs.version }}-gitflow.zip
@@ -133,7 +133,7 @@ jobs:
       runs-on: ubuntu-latest
       
       env:
-        OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
+        OCTOPUS_URL: ${{ vars.OCTOPUS_SERVER_URL }}
         OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY }}
         OCTOPUS_SPACE: ${{ vars.OCTOPUS_SPACE_NAME }}
       
@@ -154,7 +154,7 @@ jobs:
       runs-on: ubuntu-latest
       
       env:
-        OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
+        OCTOPUS_URL: ${{ vars.OCTOPUS_SERVER_URL }}
         OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY }}
         OCTOPUS_SPACE: ${{ vars.OCTOPUS_SPACE_NAME }}
         
